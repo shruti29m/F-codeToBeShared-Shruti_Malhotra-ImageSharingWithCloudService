@@ -1,2 +1,3 @@
-# F-codeToBeShared-Shruti_Malhotra-ImageSharingWithCloudService
-ImageSharingWithCloudService
+Project: Image Sharing with Cloud Service
+
+Image Sharing with Cloud Service is a Web application using ASP.NET MVC as front end and Microsoft Azure for managing the data. This web application allowed user to upload images to the Azure cloud as well as validated the image type before uploading to blob storage. The user in the application were defined in the three categories such as normal user, approver and supervisor. The image uploaded by the user was approved by approver. The new user who registered in the web application was added by the supervisor and deleted by him. Only specific image type could be uploaded and the size of the image is defined too.
