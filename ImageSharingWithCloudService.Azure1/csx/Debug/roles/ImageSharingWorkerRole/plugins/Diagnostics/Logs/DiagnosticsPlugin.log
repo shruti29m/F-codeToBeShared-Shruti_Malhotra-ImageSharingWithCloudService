@@ -1,0 +1,71 @@
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:37 PM] Starting DiagnosticPlugin.exe DiagnosticPlugin-ShutdownEvent DiagnosticPlugin-TotalShutdownEvent -wadVer1v4
+DiagnosticsPlugin.exe Error: 0 : [11/30/2015 10:49:37 PM] Failed to save IIS Directory state
+DiagnosticsPlugin.exe Error: 0 : [11/30/2015 10:49:37 PM] System.UnauthorizedAccessException: Filename: redirection.config
+Error: Cannot read configuration file due to insufficient permissions
+
+
+   at Microsoft.Web.Administration.Interop.AppHostWritableAdminManager.GetAdminSection(String bstrSectionName, String bstrSectionPath)
+   at Microsoft.Web.Administration.Configuration.GetSectionInternal(ConfigurationSection section, String sectionPath, String locationPath)
+   at Microsoft.Web.Administration.ServerManager.get_SitesSection()
+   at Microsoft.Web.Administration.ServerManager.get_Sites()
+   at Microsoft.Azure.Plugins.Plugin.DiagnosticsPluginManager.SaveIISDirectoryState()
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:37 PM] Starting DiagnosticsPlugin
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:37 PM] Emulator config file set to C:\Users\smalhot1\Documents\Visual Studio 2015\Projects\Deploy\ImageSharingWithCloudService\ImageSharingWithCloudService.Azure1\csx\Debug\roles\ImageSharingWorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:37 PM] DiagnosticsStoreRootPath set to: C:\Users\smalhot1\AppData\Local\dftmp\Resources\8bcde826-b513-4237-95de-e1cc95daee0e
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Loading config file: C:\Users\smalhot1\Documents\Visual Studio 2015\Projects\Deploy\ImageSharingWithCloudService\ImageSharingWithCloudService.Azure1\csx\Debug\roles\ImageSharingWorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Checking VM Type
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Emulator config file set to C:\Users\smalhot1\Documents\Visual Studio 2015\Projects\Deploy\ImageSharingWithCloudService\ImageSharingWithCloudService.Azure1\csx\Debug\roles\ImageSharingWorkerRole\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Extension set to Emulator Mode
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Reading XML configuration file
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Bypassing private config decryption
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] WadCfg is provided in initial configuration. Using that to initialize Diagnostics.
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] <PublicConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
+  <WadCfg>
+    <DiagnosticMonitorConfiguration overallQuotaInMB="4096">
+      <DiagnosticInfrastructureLogs scheduledTransferLogLevelFilter="Error" />
+      <Logs scheduledTransferPeriod="PT1M" scheduledTransferLogLevelFilter="Error" />
+      <Directories scheduledTransferPeriod="PT1M">
+        <IISLogs containerName="wad-iis-logfiles" />
+        <FailedRequestLogs containerName="wad-failedrequestlogs" />
+      </Directories>
+      <WindowsEventLog scheduledTransferPeriod="PT1M">
+        <DataSource name="Application!*" />
+      </WindowsEventLog>
+      <CrashDumps containerName="wad-crashdumps" dumpType="Mini">
+        <CrashDumpConfiguration processName="WaIISHost.exe" />
+        <CrashDumpConfiguration processName="WaWorkerHost.exe" />
+        <CrashDumpConfiguration processName="w3wp.exe" />
+      </CrashDumps>
+      <PerformanceCounters scheduledTransferPeriod="PT1M">
+        <PerformanceCounterConfiguration counterSpecifier="\Memory\Available MBytes" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\Web Service(_Total)\ISAPI Extension Requests/sec" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\Web Service(_Total)\Bytes Total/Sec" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\ASP.NET Applications(__Total__)\Requests/Sec" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\ASP.NET Applications(__Total__)\Errors Total/Sec" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\ASP.NET\Requests Queued" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\ASP.NET\Requests Rejected" sampleRate="PT3M" />
+        <PerformanceCounterConfiguration counterSpecifier="\Processor(_Total)\% Processor Time" sampleRate="PT3M" />
+      </PerformanceCounters>
+    </DiagnosticMonitorConfiguration>
+  </WadCfg>
+  <StorageAccount>devstoreaccount1</StorageAccount>
+</PublicConfig>
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Private setting is loaded
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Successfully created checkpoint file C:\Users\smalhot1\AppData\Local\dftmp\Resources\8bcde826-b513-4237-95de-e1cc95daee0e\WAD0104\Configuration\Checkpoint.txt
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Will use local resource directory C:\Users\smalhot1\AppData\Local\dftmp\Resources\8bcde826-b513-4237-95de-e1cc95daee0e\WAD0104
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:38 PM] Will use endpoint https://core.windows.net for storage.
+DiagnosticsPlugin.exe Error: 0 : [11/30/2015 10:49:40 PM] Exception in creating the ServerManager; is IIS installed?
+ Error:System.UnauthorizedAccessException: Filename: redirection.config
+Error: Cannot read configuration file due to insufficient permissions
+
+
+   at Microsoft.Web.Administration.Interop.AppHostWritableAdminManager.GetAdminSection(String bstrSectionName, String bstrSectionPath)
+   at Microsoft.Web.Administration.Configuration.GetSectionInternal(ConfigurationSection section, String sectionPath, String locationPath)
+   at Microsoft.Web.Administration.ServerManager.get_SitesSection()
+   at Microsoft.Web.Administration.ServerManager.get_Sites()
+   at Microsoft.Azure.Plugins.Plugin.WadConfigProcessor.AddDirectories(EventsType mdsEvents, Directories wadDirectories)
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:40 PM] Running in emulator mode, crash dumps not enabled
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:49:40 PM] In emulator mode and using devstore updating XStoreAccount info, command line args: -LocalPath "C:\Users\smalhot1\AppData\Local\dftmp\Resources\8bcde826-b513-4237-95de-e1cc95daee0e\WAD0104"  -ConfigFile "C:\Users\smalhot1\AppData\Local\dftmp\Resources\8bcde826-b513-4237-95de-e1cc95daee0e\WAD0104\Configuration\MaConfig.xml" -ShutDownEvent WADDM-ShutDown-e1b46f0ef7234cc380aff6b62fc41f1f  -TotalShutDownEvent WADDM-TotalShutDown-e1b46f0ef7234cc380aff6b62fc41f1f -InitializedEvent WADM-StartUp-e1b46f0ef7234cc380aff6b62fc41f1f -parent 20268 -events -wadVer1v4 -UseProxyServer -XStoreAccounts WadAccount#true#devstoreaccount1#Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==#http://127.0.0.1:10002#http://127.0.0.1:10001#http://127.0.0.1:10000
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:50:40 PM] MonAgentHost.exe started
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:50:40 PM] DiagnoticsPlugin started.
+DiagnosticsPlugin.exe Information: 0 : [11/30/2015 10:50:40 PM] DiagnoticsPlugin now waiting on events "DiagnosticPlugin-ShutdownEvent", "DiagnosticPlugin-TotalShutdownEvent" or "DiagnosticPlugin-RestartEvent".
